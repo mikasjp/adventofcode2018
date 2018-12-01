@@ -6,7 +6,7 @@ print(Frequency)
 
 #second part
 Frequency = 0
-Duplicates = []
+Duplicates = set()
 
 i = 0
 
@@ -14,7 +14,7 @@ while True:
      Frequency += Data[i]
      if Frequency in Duplicates:
          break
-     Duplicates.append(Frequency)
+     Duplicates.add(Frequency)
      i = (i + 1) % len(Data)
 
 print(Frequency)
