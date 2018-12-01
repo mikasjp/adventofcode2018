@@ -1,13 +1,16 @@
 # My [Advent of Code 2018](http://adventofcode.com/2018) solutions
+
 Just for practice and fun. Thank You [Eric](http://was.tl/)!
 
 ---
 
-| Day   | Name                         | Python                     | Ruby  |
-| :---: | :--------------------------- | :------------------------: | :---: |
-| 01    | [Chronal Calibration][day01] | [:heavy_check_mark:][py01] |       |
+| Day   | Name                         | Python                     | Ruby                       |
+| :---: | :--------------------------- | :------------------------: | :------------------------: |
+| 01    | [Chronal Calibration][day01] | [:heavy_check_mark:][py01] | [:heavy_check_mark:][rb01] |
 
 [py01]: ./01/solution.py
+
+[rb01]: ./01/solution.rb
 
 [day01]: https://adventofcode.com/2017/day/1
 [day02]: https://adventofcode.com/2017/day/2
