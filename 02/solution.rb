@@ -4,7 +4,7 @@ data = File.open("data.txt")
 
 # First part
 c =  data.map{|row| row.split("")}
-            .map{|row| row.uniq.map{ |char| row.count(char) if row.count(char)!=1 }.compact.uniq}
+            .map{|row| row.uniq.map{ |char| row.count(char) if [2, 3].include? row.count(char) }.compact.uniq}
             .reduce([], :concat)
 
 puts "First part: " + c.uniq
