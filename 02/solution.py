@@ -5,7 +5,7 @@ occurences = {}
 
 for row in data:
     unique = set(row)
-    cnt = set([row.count(x) for x in unique if row.count(x)!=1])
+    cnt = set([row.count(x) for x in unique if row.count(x) in [2, 3]])
     for i in cnt:
         if i==1:
             continue
