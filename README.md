@@ -4,10 +4,10 @@ Just for practice and fun. Thank You [Eric](http://was.tl/)!
 
 ---
 
-| Day   | Name                         | Python                     | Ruby                       |
-| :---: | :--------------------------- | :------------------------: | :------------------------: |
-| 01    | [Chronal Calibration][day01] | [:heavy_check_mark:][py01] | [:heavy_check_mark:][rb01] |
-| 02    | [Chronal Calibration][day01] | [:heavy_check_mark:][py02] |                            |
+| Day   | Name                                 | Python                     | Ruby                       |
+| :---: | :----------------------------------- | :------------------------: | :------------------------: |
+| 01    | [Chronal Calibration][day01]         | [:heavy_check_mark:][py01] | [:heavy_check_mark:][rb01] |
+| 02    | [Inventory Management System][day02] | [:heavy_check_mark:][py02] |                            |
 
 [py01]: ./01/solution.py
 [py02]: ./02/solution.py
