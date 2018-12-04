@@ -8,7 +8,7 @@ def epoch(x):
     x = x.split(" ")
     d = list(map(int,x[0].split("-")))
     t = list(map(int,x[1].split(":")))
-    return datetime.datetime(d[0], d[1], d[2], t[0], t[1])#.timestamp()
+    return datetime.datetime(d[0], d[1], d[2], t[0], t[1])
 
 data = [{"timestamp": epoch(x[0]), "cmd": x[1]} for x in data]
 data = sorted(data, key = lambda k: k["timestamp"])
@@ -39,4 +39,19 @@ all_minutes = []
 for x in minutes:
     all_minutes += x
 
-print(Counter(all_minutes).most_common(1)[0][0] * sleepyhead)
+print("First part: " + str(Counter(all_minutes).most_common(1)[0][0] * sleepyhead))
+
+# Part 2
+naps = {}
+
+for g,n in guards.items():
+    minutes = [[z.minute for z in rrule.rrule(rrule.MINUTELY, dtstart=x[0], until=x[-1])] for x in n]
+    all_minutes = []
+
+    for x in minutes:
+        all_minutes += x
+        naps[g] = Counter(all_minutes).most_common(1)[0]
+
+naps = sorted(naps.items(), key = lambda k: k[1][1], reverse=True)
+
+print("Second part: " + str(naps[0][0] * naps[0][1][0]))
