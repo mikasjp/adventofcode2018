@@ -9,10 +9,12 @@ Just for practice and fun. Thank You [Eric](http://was.tl/)!
 | 01    | [Chronal Calibration][day01]         | [:heavy_check_mark:][py01] | [:heavy_check_mark:][rb01] |
 | 02    | [Inventory Management System][day02] | [:heavy_check_mark:][py02] | [:heavy_check_mark:][rb02] |
 | 03    | [No Matter How You Slice It][day03]  | [:heavy_check_mark:][py03] |                            |
+| 04    | [Repose Record][day04]               | [:heavy_check_mark:][py04] |                            |
 
 [py01]: ./01/solution.py
 [py02]: ./02/solution.py
 [py03]: ./03/solution.py
+[py04]: ./04/solution.py
 
 [rb01]: ./01/solution.rb
 [rb02]: ./02/solution.rb
