@@ -1,26 +1,22 @@
-import asyncio
-
-data = list(open("data.txt").read())
+data = list(open("data.txt").read().rstrip())
 
 def react(polymer):
-    i = 0
-    while(i < polymer.__len__()-1):
-        if(abs(ord(polymer[i])-ord(polymer[i+1])) == 32):
-            del polymer[i+1]
-            del polymer[i]
-            i = 0
+    buff = [" "]
+    for i in range(polymer.__len__()):
+        if(polymer[i]!=buff[-1] and polymer[i].lower()==buff[-1].lower()):
+            buff.pop()
         else:
-            i = i+1
+            buff.append(polymer[i])
+    return buff.__len__()-1
 
-    return polymer.__len__()
-
-print(react(data))
+# First part
+print(f"First part: %i" % react(data))
 
 # Second part
-components = list(zip(sorted(set(open("data.txt").read().upper())), sorted(set(open("data.txt").read().lower()))))
+components = list(zip(sorted(set([x.upper() for x in data])), sorted(set([x.lower() for x in data]))))
 
 l = []
 for x in components:
     l.append(react([z for z in data if z not in x]))
 
-print(min(l))
+print(f"Second part: %i" % min(l))
